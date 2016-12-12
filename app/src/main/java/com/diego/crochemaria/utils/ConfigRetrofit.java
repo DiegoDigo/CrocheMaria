@@ -9,13 +9,11 @@ import retrofit.Retrofit;
 
 public class ConfigRetrofit {
 
-    private final String url = "192.168.116.1/v1";
-
-    public Retrofit conexao(){
+     public static Retrofit conexao(){
         Retrofit retrofit = new Retrofit
                 .Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(url)
+                .baseUrl("192.168.116.1/v1")
                 .build();
         return retrofit;
     }

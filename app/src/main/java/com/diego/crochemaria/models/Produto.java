@@ -13,11 +13,20 @@ public class Produto implements Serializable{
 
 
     private Long id;
+    private String produto;
     private BigDecimal preco;
     private Integer quantidade;
     private String descricao;
     private String imagem ;
     private Categoria categoria;
+
+    public String getProduto() {
+        return produto;
+    }
+
+    public void setProduto(String produto) {
+        this.produto = produto;
+    }
 
     public Long getId() {
         return id;

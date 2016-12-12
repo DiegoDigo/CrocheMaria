@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
@@ -10,57 +11,60 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
-    <ImageView
-        android:layout_width="150dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/imageView"
-        android:layout_weight="0.35"
-        android:contentDescription=""
-        android:layout_height="150dp"
-        android:layout_marginTop="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:id="@+id/img"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription=""
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_share"
-            android:id="@+id/compartilhar"
-            android:layout_marginTop="172dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-             />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_share"
+        android:id="@+id/compartilhar"
+        android:layout_marginTop="172dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription=""
+        tools:ignore="ContentDescription,UnusedAttribute"
+        android:backgroundTint="@color/butaoCompartilhar"/>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_info_details"
-            android:id="@+id/comprar"
-            android:layout_alignTop="@+id/compartilhar"
-            android:layout_toStartOf="@+id/compartilhar"
-            android:layout_alignBottom="@+id/compartilhar"
-            />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/carrinho_vaziu"
+        android:id="@+id/comprar"
+        android:layout_alignTop="@+id/compartilhar"
+        android:layout_toStartOf="@+id/compartilhar"
+        android:layout_alignBottom="@+id/compartilhar"
+        android:contentDescription=""
+        tools:ignore="ContentDescription,UnusedAttribute"
+        android:backgroundTint="@color/butaoCompra"/>
 
-        <TextView
-            android:text="Valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/valor"
-            android:layout_marginStart="19dp"
-            android:layout_alignBottom="@+id/compartilhar"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="11dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valor"
+        android:layout_marginStart="19dp"
+        android:layout_alignBottom="@+id/compartilhar"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        tools:ignore="RelativeOverlap" />
 
-        <TextView
-            android:text="Produto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/produto"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:layout_alignTop="@+id/comprar"
-            android:layout_alignStart="@+id/valor" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/produto"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignTop="@+id/comprar"
+        android:layout_alignStart="@+id/valor" />
 
 
 </RelativeLayout>
