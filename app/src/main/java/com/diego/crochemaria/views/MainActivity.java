@@ -1,7 +1,9 @@
-package com.diego.crochemaria;
+package com.diego.crochemaria.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.diego.crochemaria.R;
 
 public class MainActivity extends AppCompatActivity {
 
