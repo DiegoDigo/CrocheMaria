@@ -30,7 +30,6 @@ public class ProdutoAdapterRecly extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-
         View view = LayoutInflater.from(context).inflate(R.layout.layout_produto, parent,false);
         ProdutoViewHolder holder = new ProdutoViewHolder(view);
 
@@ -41,7 +40,7 @@ public class ProdutoAdapterRecly extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ProdutoViewHolder viewHolder = (ProdutoViewHolder) holder;
         viewHolder.nomeProduto.setText(produtos.get(position).getProduto());
-        viewHolder.valorProduto.setText(produtos.get(position).getPreco().toString());
+        viewHolder.valorProduto.setText("R$ "  + produtos.get(position).getPreco().toString());
         Context c = viewHolder.img.getContext();
         Picasso.with(c).load(produtos.get(position).getImagem()).into(viewHolder.img);
     }
