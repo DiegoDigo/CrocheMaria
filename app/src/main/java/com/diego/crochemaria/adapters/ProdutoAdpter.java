@@ -32,7 +32,7 @@ public class ProdutoAdpter extends ArrayAdapter<Produto> {
    public View getView(int position , View convertView , ViewGroup parent){
        LayoutInflater inflater = LayoutInflater.from(getContext());
        View item = inflater.inflate(R.layout.layout_produto, null);
-       precoProduto = (TextView) item.findViewById(R.id.valor);
+       precoProduto = (TextView) item.findViewById(R.id.preco);
        nomeProduto = (TextView) item.findViewById(R.id.produto);
        ImageView img = (ImageView) item.findViewById(R.id.img);
        Picasso.with(getContext()).load(produtos.get(position).getImagem()).resize(100,100).into(img);

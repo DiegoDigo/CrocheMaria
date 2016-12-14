@@ -3,6 +3,7 @@ package com.diego.crochemaria.views;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -12,6 +13,7 @@ import com.diego.crochemaria.adapters.ProdutoAdpter;
 import com.diego.crochemaria.endpoint.EndPoint;
 import com.diego.crochemaria.models.Produto;
 import com.diego.crochemaria.utils.ConfigRetrofit;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -24,19 +26,17 @@ import retrofit.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private ListView produtos;
-        private TextView teste;
-    final int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
-
+    private ListView produtos;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Typeface font = Typeface.createFromAsset(getAssets(),"Pacifico-Regular.ttf");
-        TextView titulo = (TextView) findViewById(titleId);
-        titulo.setTypeface(font);
-        this.setTitle(titulo.toString());
+//        teste.setText(this.getTitle().toString());
+//        Typeface font = Typeface.createFromAsset(getAssets(),"Pacifico-Regular.ttf");
+//        teste.setTypeface(font);
+//        this.setTitle(teste.toString());
 
 
 
