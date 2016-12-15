@@ -12,10 +12,7 @@ import retrofit.Retrofit;
 public class ConfigRetrofit {
 
      public static Retrofit conexao(){
-         String url = "http://192.168.0.116:8000/v1/";
-
-         Log.i("LOG URL", url);
-
+        String url = "http://192.168.0.116:8000/v1/";
         Retrofit retrofit = new Retrofit
                 .Builder()
                 .addConverterFactory(GsonConverterFactory.create())
