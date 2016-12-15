@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <item
+        android:id="@+id/action_search"
+        android:title="teste 1"
+        android:orderInCategory="100"
+        android:icon="@mipmap/ic_launcher"
+
+        />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="teste 2"
+        android:orderInCategory="100"
+         />
+</menu>

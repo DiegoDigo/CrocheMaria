@@ -7,14 +7,19 @@
     android:backgroundTint="#F5F5F5"
     tools:context="com.diego.crochemaria.views.MainActivity">
 
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/msg"/>
+        android:id="@+id/msg"
+        android:layout_below="@+id/toolbar"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listProduto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
 
 </RelativeLayout>
