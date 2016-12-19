@@ -1,6 +1,7 @@
 package com.diego.crochemaria.views;
 
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private  TextView msg;
-    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +38,11 @@ public class MainActivity extends AppCompatActivity {
 //        teste.setTypeface(font);
 //        this.setTitle(teste.toString());
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         recyclerView = (RecyclerView) findViewById(R.id.listProduto);
         msg = (TextView) findViewById(R.id.msg);
+        setToolBar();
 
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         Retrofit retrofit = ConfigRetrofit.conexao();
         EndPoint api = retrofit.create(EndPoint.class);
@@ -63,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("LOG", t.getMessage());
             }
         });
+
+    }
+
+    private void setToolBar() {
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
     }
 

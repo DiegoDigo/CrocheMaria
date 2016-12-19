@@ -47,7 +47,6 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            cardView:srcCompat="@mipmap/carrinho_vaziu"
             android:layout_below="@+id/preco"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="19dp"
@@ -57,7 +56,6 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            cardView:srcCompat="@mipmap/carrinho_vaziu"
             android:id="@+id/imageView2"
             android:padding="8dp"
             android:layout_alignParentBottom="true"

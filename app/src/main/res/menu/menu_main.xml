@@ -9,7 +9,7 @@
         android:id="@+id/action_search"
         android:title="teste 1"
         android:orderInCategory="100"
-        android:icon="@mipmap/ic_launcher"
+
 
         />
 
