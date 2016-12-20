@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.diego.crochemaria.R;
 import com.diego.crochemaria.adapters.ProdutoAdapterRecly;
 import com.diego.crochemaria.endpoint.EndPoint;
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private  TextView msg;
     private StaggeredGridLayoutManager mStaggeredGridLayoutManager;
+    private Toast toast;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Response<List<Produto>> response, Retrofit retrofit) {
                 final ProdutoAdapterRecly adapter = new ProdutoAdapterRecly(getBaseContext(), response.body());
 //                RecyclerView.LayoutManager layout = new LinearLayoutManager(getBaseContext(),LinearLayoutManager.VERTICAL,false);
-                mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL);
+                mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
                 recyclerView.setLayoutManager(mStaggeredGridLayoutManager);
                 recyclerView.setAdapter(adapter);
             }
@@ -88,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            return true;
+            toast = Toast.makeText(getBaseContext(), "teste  - "+ id,Toast.LENGTH_SHORT);
+            toast.show();
         }
 
         return super.onOptionsItemSelected(item);

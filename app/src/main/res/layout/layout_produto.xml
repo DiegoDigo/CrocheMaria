@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardView="http://schemas.android.com/apk/res-auto"
@@ -8,18 +9,13 @@
     cardView:cardCornerRadius="10dp"
     cardView:cardElevation="4dp">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <ImageView
             android:id="@+id/img"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_alignParentTop="true"
             android:scaleType="centerCrop"
-            android:src="@null" />
+            />
 
         <TextView
             android:id="@+id/produto"
@@ -62,5 +58,5 @@
             android:layout_toStartOf="@+id/imageView3" />
 
 
-    </RelativeLayout>
+
 </android.support.v7.widget.CardView>
