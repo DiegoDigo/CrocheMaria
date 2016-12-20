@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private  TextView msg;
+    private StaggeredGridLayoutManager mStaggeredGridLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Response<List<Produto>> response, Retrofit retrofit) {
                 final ProdutoAdapterRecly adapter = new ProdutoAdapterRecly(getBaseContext(), response.body());
-                RecyclerView.LayoutManager layout = new LinearLayoutManager(getBaseContext(),LinearLayoutManager.VERTICAL,false);
-                recyclerView.setLayoutManager(layout);
+//                RecyclerView.LayoutManager layout = new LinearLayoutManager(getBaseContext(),LinearLayoutManager.VERTICAL,false);
+                mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL);
+                recyclerView.setLayoutManager(mStaggeredGridLayoutManager);
                 recyclerView.setAdapter(adapter);
             }
 
