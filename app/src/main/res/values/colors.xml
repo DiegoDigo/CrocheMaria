@@ -3,8 +3,7 @@
     <color name="colorPrimaryDark">#009688</color>
     <color name="colorPrimary">#26A69A</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="butaoCompra">#009688</color>
-    <color name="butaoCompartilhar">#9E9E9E</color>
     <color name="titleCard">#222</color>
     <color name="subTitleCard">#666</color>
+    <color name="fundo">#EEEEEE</color>
 </resources>

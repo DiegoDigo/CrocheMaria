@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#F5F5F5"
+    android:background="@color/fundo"
     tools:context="com.diego.crochemaria.views.MainActivity">
 
     <include android:id="@+id/toolbar"

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CrocheMaria</string>
+    <string name="descricaoComp">Compartilhar</string>
+    <string name="descricaoFa">Favoritar</string>
 </resources>

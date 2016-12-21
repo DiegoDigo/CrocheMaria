@@ -19,6 +19,9 @@ import com.diego.crochemaria.adapters.ProdutoAdapterRecly;
 import com.diego.crochemaria.endpoint.EndPoint;
 import com.diego.crochemaria.models.Produto;
 import com.diego.crochemaria.utils.ConfigRetrofit;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import retrofit.Call;
 import retrofit.Callback;
@@ -50,15 +53,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         Retrofit retrofit = ConfigRetrofit.conexao();
         EndPoint api = retrofit.create(EndPoint.class);
         Call<List<Produto>> call = api.produtos();
         call.enqueue(new Callback<List<Produto>>() {
             @Override
             public void onResponse(Response<List<Produto>> response, Retrofit retrofit) {
-                final ProdutoAdapterRecly adapter = new ProdutoAdapterRecly(getBaseContext(), response.body());
+                final ProdutoAdapterRecly adapter = new ProdutoAdapterRecly(getBaseContext(),response.body());
 //                RecyclerView.LayoutManager layout = new LinearLayoutManager(getBaseContext(),LinearLayoutManager.VERTICAL,false);
-                mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+                mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL);
                 recyclerView.setLayoutManager(mStaggeredGridLayoutManager);
                 recyclerView.setAdapter(adapter);
             }
@@ -76,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
     }
