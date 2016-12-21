@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:paddingTop="24dp"
+            android:paddingTop="30dp"
             android:textColor="@color/titleCard"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -50,42 +50,38 @@
         android:layout_gravity="bottom"
         android:padding="8dp">
 
-
-        <ImageView
-            android:id="@+id/comp"
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="false"
-            android:contentDescription="@string/descricaoComp"
-            android:padding="8dp"
-            android:scaleType="fitXY"
             android:src="@drawable/ic_share"
-            android:layout_marginEnd="12dp"
+            android:padding="8dp"
+            android:id="@+id/compartilhar"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:clickable="true" />
+            android:contentDescription="@string/descricaoComp" />
 
-        <ImageView
-            android:id="@+id/like"
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/descricaoFa"
-            android:padding="8dp"
             android:src="@drawable/ic_like"
-            android:layout_toStartOf="@+id/comp"
+            android:id="@+id/like"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_alignParentTop="true"
-            android:clickable="true" />
+            android:layout_toStartOf="@+id/compartilhar"
+            android:contentDescription="@string/descricaoFa" />
 
-        <ImageView
-            android:id="@+id/buy"
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/buy"
-            android:padding="8dp"
             android:src="@drawable/ic_shopping"
+            android:id="@+id/comprar"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/like"
-            android:clickable="true" />
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/buy" />
 
     </RelativeLayout>
 

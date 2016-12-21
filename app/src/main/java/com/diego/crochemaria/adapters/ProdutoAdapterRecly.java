@@ -1,6 +1,7 @@
 package com.diego.crochemaria.adapters;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +13,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-/**
- * Created by Diego on 14/12/2016.
- */
 
 public class ProdutoAdapterRecly extends RecyclerView.Adapter {
 
@@ -31,16 +29,16 @@ public class ProdutoAdapterRecly extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.layout_produto, parent,false);
-        ProdutoViewHolder holder = new ProdutoViewHolder(view);
-
-        return holder;
+        return new ProdutoViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        Typeface font = Typeface.createFromAsset(context.getAssets(),"Pacifico-Regular.ttf");
         ProdutoViewHolder viewHolder = (ProdutoViewHolder) holder;
         viewHolder.nomeProduto.setText(produtos.get(position).getProduto());
-        viewHolder.valorProduto.setText("R$ "  + produtos.get(position).getPreco().toString());
+        viewHolder.nomeProduto.setTypeface(font);
+        viewHolder.valorProduto.setText(String.format("R$ ",produtos.get(position).getPreco().toString()));
         Context c = viewHolder.img.getContext();
         Picasso.with(c).load(produtos.get(position).getImagem()).into(viewHolder.img);
     }
