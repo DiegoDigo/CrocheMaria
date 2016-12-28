@@ -1,9 +1,7 @@
 package com.diego.crochemaria.endpoint;
 
-import android.os.Process;
-
-import com.diego.crochemaria.models.Categoria;
-import com.diego.crochemaria.models.Produto;
+import com.diego.crochemaria.models.produto.Catalogo;
+import com.diego.crochemaria.models.produto.Produto;
 
 import java.util.List;
 
@@ -20,6 +18,6 @@ public interface EndPoint {
     public Call<List<Produto>> produtos();
 
     @GET("categorias/")
-    public Call<List<Categoria>> categorias();
+    public Call<List<Catalogo>> categorias();
 
 }

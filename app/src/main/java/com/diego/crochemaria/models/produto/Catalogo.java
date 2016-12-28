@@ -1,4 +1,4 @@
-package com.diego.crochemaria.models;
+package com.diego.crochemaria.models.produto;
 
 import java.io.Serializable;
 
@@ -6,12 +6,12 @@ import java.io.Serializable;
  * Created by Diego on 12/12/2016.
  */
 
-public class Categoria implements Serializable{
+public class Catalogo implements Serializable{
 
     private static final long serialVersionUID = 1L;
 
     private Long id;
-    private String categoria;
+    private String Catalogo;
 
     public Long getId() {
         return id;
@@ -21,11 +21,11 @@ public class Categoria implements Serializable{
         this.id = id;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getCatalogo() {
+        return Catalogo;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCatalogo(String categoria) {
+        this.Catalogo = categoria;
     }
 }

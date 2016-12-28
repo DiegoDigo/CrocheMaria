@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.diego.crochemaria.R;
-import com.diego.crochemaria.models.Produto;
+import com.diego.crochemaria.models.produto.Produto;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -36,7 +36,7 @@ public class ProdutoAdapterRecly extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Typeface font = Typeface.createFromAsset(context.getAssets(),"Pacifico-Regular.ttf");
         ProdutoViewHolder viewHolder = (ProdutoViewHolder) holder;
-        viewHolder.nomeProduto.setText(produtos.get(position).getProduto());
+        viewHolder.nomeProduto.setText(produtos.get(position).getNome());
         viewHolder.nomeProduto.setTypeface(font);
         viewHolder.valorProduto.setText(String.format("R$ ",produtos.get(position).getPreco().toString()));
         Context c = viewHolder.img.getContext();

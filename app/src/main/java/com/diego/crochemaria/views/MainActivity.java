@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.diego.crochemaria.R;
 import com.diego.crochemaria.adapters.ProdutoAdapterRecly;
 import com.diego.crochemaria.endpoint.EndPoint;
-import com.diego.crochemaria.models.Produto;
+import com.diego.crochemaria.models.produto.Produto;
 import com.diego.crochemaria.utils.ConfigRetrofit;
 
 import java.util.List;
