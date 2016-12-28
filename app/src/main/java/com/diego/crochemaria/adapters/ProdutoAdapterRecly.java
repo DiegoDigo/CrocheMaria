@@ -41,7 +41,7 @@ public class ProdutoAdapterRecly extends RecyclerView.Adapter {
         viewHolder.nomeProduto.setText(produtos.get(position).getNome());
         viewHolder.nomeProduto.setTypeface(fontProduto);
         viewHolder.descicaoProduto.setText(produtos.get(position).getDescricao());
-        viewHolder.nomeProduto.setTypeface(fontDescricao);
+        viewHolder.descicaoProduto.setTypeface(fontDescricao);
         viewHolder.valorProduto.setText(String.format("R$ ",produtos.get(position).getPreco().toString()));
         Context c = viewHolder.img.getContext();
         Picasso.with(c).load(produtos.get(position).getImagem()).into(viewHolder.img);
