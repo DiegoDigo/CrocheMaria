@@ -13,7 +13,7 @@ import com.diego.crochemaria.R;
 
 public class ProdutoViewHolder extends RecyclerView.ViewHolder{
 
-    final TextView nomeProduto, valorProduto , descicaoProduto;
+    final TextView nomeProduto, valorProduto ;
     final ImageView img;
 
 
@@ -23,7 +23,6 @@ public class ProdutoViewHolder extends RecyclerView.ViewHolder{
         this.nomeProduto = (TextView) itemView.findViewById(R.id.produto);
         this.valorProduto = (TextView) itemView.findViewById(R.id.preco);
         this.img = (ImageView) itemView.findViewById(R.id.img);
-        this.descicaoProduto = (TextView) itemView.findViewById(R.id.descricao);
 
     }
 

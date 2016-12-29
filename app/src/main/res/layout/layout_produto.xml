@@ -32,19 +32,7 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/descricao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="12dp"
-            android:textColor="@color/subTitleCard"
-            android:textSize="14sp"
-            />
-
-
-        <TextView
+      <TextView
             android:id="@+id/preco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

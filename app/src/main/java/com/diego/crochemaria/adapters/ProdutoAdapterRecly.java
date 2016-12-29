@@ -35,13 +35,11 @@ public class ProdutoAdapterRecly extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Typeface fontProduto = Typeface.createFromAsset(context.getAssets(),"Pacifico-Regular.ttf");
-        Typeface fontDescricao = Typeface.createFromAsset(context.getAssets(),"YanoneKaffeesatz-Light.ttf");
+//FIXME:Mudar para a tela de detalhe produto
+//        Typeface fontDescricao = Typeface.createFromAsset(context.getAssets(),"YanoneKaffeesatz-Light.ttf");
 
         ProdutoViewHolder viewHolder = (ProdutoViewHolder) holder;
         viewHolder.nomeProduto.setText(produtos.get(position).getNome());
-        viewHolder.nomeProduto.setTypeface(fontProduto);
-        viewHolder.descicaoProduto.setText(produtos.get(position).getDescricao());
-        viewHolder.descicaoProduto.setTypeface(fontDescricao);
         viewHolder.valorProduto.setText(String.format("R$ ",produtos.get(position).getPreco().toString()));
         Context c = viewHolder.img.getContext();
         Picasso.with(c).load(produtos.get(position).getImagem()).into(viewHolder.img);

@@ -17,7 +17,6 @@ public class Produto implements Serializable {
     private Long id;
     private Catalogo catalogo;
     private String nome;
-    private String descricao;
     private Integer quantidade;
     private BigDecimal preco;
     private String imagem;
@@ -46,14 +45,6 @@ public class Produto implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
 
     public Integer getQuantidade() {
